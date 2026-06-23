@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Quiz Zone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="quiz-container" id="quizApp">
+    <!-- HEADER -->
+    <div class="header">
+      <h1>⚡ Quiz Zone</h1>
+      <div class="high-score-badge">🏆 High: <span id="highScoreDisplay">0</span></div>
+    </div>
+
+    <!-- CATEGORY SELECTOR -->
+    <div class="category-selector" id="categorySelector">
+      <button class="cat-btn active" data-category="java">☕ Java</button>
+      <button class="cat-btn" data-category="web">🌐 Web Dev</button>
+    </div>
+
+    <!-- START BUTTON -->
+    <div id="startScreen" class="start-screen">
+      <button id="startBtn" class="start-btn">▶ Start Quiz</button>
+      <p class="start-info">⏱️ 15 seconds per question · 5 questions</p>
+    </div>
+
+    <!-- QUIZ INTERFACE -->
+    <div id="quizInterface" class="quiz-interface hidden">
+      <div class="info-bar">
+        <span id="qCounter">1 / 5</span>
+        <div class="timer-box" id="timerDisplay">15s</div>
+      </div>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <!-- QUESTION AREA -->
+      <div id="questionArea" class="question-card">
+        <div id="qTypeBadge" class="q-type-badge">Single choice</div>
+        <div class="question-text" id="questionText">Loading question...</div>
+        <div id="optionsContainer" class="options-group"></div>
+        <input type="text" id="fillInput" class="fill-input hidden" placeholder="Type your answer..." />
+        <div class="action-bar">
+          <button id="prevBtn" class="secondary">◀ Back</button>
+          <button id="nextBtn" class="primary">Next ▶</button>
+          <button id="submitBtn" class="primary hidden">✅ Submit</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESULTS PANEL -->
+    <div id="resultsPanel" class="results-panel hidden">
+      <h2>🏁 Quiz Complete</h2>
+      <div class="score" id="finalScore">0</div>
+      <div class="detail">out of <span id="totalQuestions">5</span> correct</div>
+      <div id="detailedResults" class="detailed-results"></div>
+      <button class="restart-btn" id="restartBtn">⟳ Play Again</button>
+    </div>
+    <div class="footnote"></div>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
