@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tech Quiz Zone</title>
+  <title>Tech & Placement Quiz Master</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="quiz-container" id="quizApp">
     <!-- HEADER -->
     <div class="header">
-      <h1>⚡ Quiz Zone</h1>
+      <h1>⚡ Quiz Master</h1>
       <div class="high-score-badge">🏆 High: <span id="highScoreDisplay">0</span></div>
     </div>
 
@@ -55,10 +55,14 @@
       <h2>🏁 Quiz Complete</h2>
       <div class="score" id="finalScore">0</div>
       <div class="detail">out of <span id="totalQuestions">5</span> correct</div>
+      
+      <!-- Motivational Message -->
+      <div class="message-box" id="messageBox">✨ Well Done!</div>
+      
       <div id="detailedResults" class="detailed-results"></div>
       <button class="restart-btn" id="restartBtn">⟳ Play Again</button>
     </div>
-    <div class="footnote"></div>
+    <div class="footnote">⏱️ 15s per question · White & Red Theme</div>
   </div>
 
   <script src="questions.js"></script>
